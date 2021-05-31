@@ -1,4 +1,6 @@
-import { StyleSheet } from "react-native"
+import {
+    StyleSheet
+} from "react-native"
 
 const css = StyleSheet.create({
 
@@ -11,7 +13,21 @@ const css = StyleSheet.create({
     textPage: {
         backgroundColor: 'orange',
         padding: 20
+    },
+    container2: {
+        flex: 1,
+        flexDirection: 'row',
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    button__home: {
+        marginRight: 40
     }
 })
 
-export { css };
+export {
+    css
+};
+
+

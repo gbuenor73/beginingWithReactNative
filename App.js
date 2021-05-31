@@ -18,7 +18,7 @@ export default function App() {
                     name="Home"
                     component={Home}
                     options={{
-                        title="WEFLOG",
+                        title: "WEFLOG",
                         headerStyle: { backgroundColor: "#F58634" },
                         headerTintColor: '#333',
                         headerTitleStyle: { fontWeight: 'bold', alignSelf: 'center' }
