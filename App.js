@@ -1,65 +1,32 @@
-import {
-    StatusBar
-} from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
-import {
-    Alert,
-    Button,
-    StyleSheet,
-    Text,
-    View
-} from 'react-native';
+import { Text, View, Button, Alert } from 'react-native';
 import { css } from './assets/css/Css';
-import Page from './views/Page';
-import { createStackNavidator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-
+import { createStackNavigator } from '@react-navigation/stack';
 import Home from './views/Home';
 import Login from './views/Login';
-
+import Rastreio from './views/Rastreio';
 
 export default function App() {
-    // const [product, setProduct] = useState('bola');
-    // const [quantity, setQuantity] = useState(0);
 
-    // useEffect(() => {
-    //     if (quantity > 0) {
-    //         Alert.alert('Novo producto adicionado');
-    //     }
-    // }, [quantity]);
-
-    // const props = {
-    //     empresa: 'Bueno Empresa',
-    //     name: 'Gabriel',
-    //     produto: product,
-    //     quantidade: quantity
-
-    // };
-
-    const Stack = createStackNavidator();
-
+    const Stack = createStackNavigator();
 
     return (
-        //<View style={css.container} >
-        //<Text> {product}</Text>
-        //<Page {...props} />
-        //<Button title='Adicionar Produtos' onPress={() => setQuantity(quantity + 1)} />
-
         <NavigationContainer>
-            <Stack.Screen name="Home" component={Home}></Stack.Screen>
-            <Stack.Screen name="Login" component={Login}></Stack.Screen>
+            <Stack.Navigator>
+                <Stack.Screen
+                    name="Home"
+                    component={Home}
+                    options={{
+                        title="WEFLOG",
+                        headerStyle: { backgroundColor: "#F58634" },
+                        headerTintColor: '#333',
+                        headerTitleStyle: { fontWeight: 'bold', alignSelf: 'center' }
+                    }}
+                />
+                <Stack.Screen name="Login" component={Login} />
+                <Stack.Screen name="Rastreio" component={Rastreio} />
+            </Stack.Navigator>
         </NavigationContainer>
-
-        //<StatusBar style="dark" /></View>
-
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-});
