@@ -8,19 +8,6 @@ export default function Home({ navigation }) {
 
     return (
         <View style={css.container2}>
-            <Text>Esse é o componente Home</Text>
-        
-            
-            {/* <Button
-                title='Ir para Login'
-                onPress={() => navigation.navigate('Login', {
-                    id: 30
-                })}
-            />
-            <Button title='Ir para Rastreio'
-                onPress={() => navigation.navigate('Rastreio', {
-                    id: 30
-                })} /> */}
 
             <TouchableOpacity style={css.button_home} onPress={() => {navigation.navigate('Login', {id: 30})}}>
                 <Image source={require('../assets/imgs/buttonLogin.png')} />

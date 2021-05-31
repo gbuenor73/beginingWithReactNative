@@ -18,13 +18,18 @@ export default function App() {
                     name="Home"
                     component={Home}
                     options={{
-                        title: "WEFLOG",
-                        headerStyle: { backgroundColor: "#F58634" },
-                        headerTintColor: '#333',
-                        headerTitleStyle: { fontWeight: 'bold', alignSelf: 'center' }
+                        title: "APP de TESTE - BUENO",
+                        headerStyle: { backgroundColor: "#027794" },
+                        headerTintColor: 'silver',
+                        headerTitleStyle: { fontWeight: 'bold', alignSelf: 'flex-end' }
                     }}
                 />
-                <Stack.Screen name="Login" component={Login} />
+                <Stack.Screen
+                    name="Login"
+                    component={Login}
+                    options={{
+                        headerShown: false
+                    }} />
                 <Stack.Screen name="Rastreio" component={Rastreio} />
             </Stack.Navigator>
         </NavigationContainer>
