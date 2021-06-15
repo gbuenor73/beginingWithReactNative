@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Text, View, Button, Alert } from 'react-native';
-import { css } from './assets/css/Css';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import React from 'react';
 import Home from './views/Home';
 import Login from './views/Login';
 import Rastreio from './views/Rastreio';
